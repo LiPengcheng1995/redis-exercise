@@ -23,7 +23,7 @@ public class MasterWriteAndSlaveRead {
     public static void main(String[] args) {
         //服务IP
         String ip = "127.0.0.1";
-        Set sentinels = new HashSet();
+        Set<String> sentinels = new HashSet<>();
         //Sentine端口
         sentinels.add(new HostAndPort(ip, 26371).toString());
         sentinels.add(new HostAndPort(ip, 26372).toString());
