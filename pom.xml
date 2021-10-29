@@ -13,6 +13,7 @@
         <module>learn-with-cluster</module>
         <module>learn-with-master-slave</module>
         <module>learn-with-master-slave-sentinel</module>
+        <module>learn-implement</module>
     </modules>
 
     <properties>
