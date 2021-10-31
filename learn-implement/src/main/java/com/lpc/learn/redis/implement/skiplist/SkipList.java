@@ -11,7 +11,7 @@ import java.util.Stack;
  * Time: 14:47
  * Description:https://zhuanlan.zhihu.com/p/339750543
  */
-public class SkipList<T> {
+public class SkipList {
 
     SkipNode headNode;//头节点，入口
     int highLevel;//当前跳表索引层数
@@ -24,6 +24,18 @@ public class SkipList<T> {
         highLevel = 0;
     }
 
+    public static void main(String[] args) {
+        SkipList list = new SkipList();
+
+        list.add(new SkipNode(Math.toIntExact(Math.round(Math.random() * 100)),"张三"));
+        list.add(new SkipNode(Math.toIntExact(Math.round(Math.random() * 100)),"李四"));
+        list.add(new SkipNode(Math.toIntExact(Math.round(Math.random() * 100)),"王五"));
+        list.add(new SkipNode(Math.toIntExact(Math.round(Math.random() * 100)),"赵六"));
+        list.add(new SkipNode(Math.toIntExact(Math.round(Math.random() * 100)),"呵呵"));
+        list.add(new SkipNode(Math.toIntExact(Math.round(Math.random() * 100)),"哈哈"));
+
+        System.out.println();
+    }
 
     //其他方法
     public void add(SkipNode node) {
@@ -126,12 +138,12 @@ public class SkipList<T> {
     }
 
 
-    class SkipNode<T> {
+    static class SkipNode {
         int key;
-        T value;
+        Object value;
         SkipNode right, down;//右下个方向的指针
 
-        public SkipNode(int key, T value) {
+        public SkipNode(int key, Object value) {
             this.key = key;
             this.value = value;
         }
