@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * Package: com.lpc.learn.redis.implement.funnel
  * User: 李鹏程
- * Email: lipengcheng3@jd.com
+ *
  * Date: 2021/11/4
  * Time: 16:41
  * Description:

@@ -6,7 +6,7 @@ import java.util.Stack;
 /**
  * Package: com.lpc.learn.redis.implement.skiplist
  * User: 李鹏程
- * Email: lipengcheng3@jd.com
+ * 
  * Date: 2021/10/29
  * Time: 14:47
  * Description:https://zhuanlan.zhihu.com/p/339750543

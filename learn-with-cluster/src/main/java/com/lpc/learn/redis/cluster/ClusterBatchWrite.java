@@ -6,7 +6,7 @@ import redis.clients.jedis.JedisCluster;
 /**
  * Package: com.lpc.learn.redis.cluster
  * User: 李鹏程
- * Email: lipengcheng3@jd.com
+ * 
  * Date: 2021/10/14
  * Time: 18:33
  * Description:

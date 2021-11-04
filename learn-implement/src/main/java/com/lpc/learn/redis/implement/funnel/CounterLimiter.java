@@ -5,7 +5,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * Package: com.lpc.learn.redis.implement.funnel
  * User: 李鹏程
- * Email: lipengcheng3@jd.com
+ * 
  * Date: 2021/11/3
  * Time: 10:24
  * Description: https://juejin.cn/post/6870396751178629127

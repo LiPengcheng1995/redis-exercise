@@ -6,7 +6,7 @@ import java.util.LinkedList;
 /**
  * Package: com.lpc.learn.redis.implement.funnel
  * User: 李鹏程
- * Email: lipengcheng3@jd.com
+ * 
  * Date: 2021/11/3
  * Time: 14:10
  * Description:
