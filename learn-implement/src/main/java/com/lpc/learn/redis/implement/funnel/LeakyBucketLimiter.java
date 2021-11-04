@@ -34,6 +34,8 @@ public class LeakyBucketLimiter {
                 while (true) {
                     if (!requestList.isEmpty()) {
                         Request request = requestList.removeFirst();
+                        // 补充一个位置
+                        left++;
                         handleRequest(request);
                     }
                     try {
@@ -110,8 +112,17 @@ public class LeakyBucketLimiter {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         LeakyBucketLimiter leakyBucketLimiter = new LeakyBucketLimiter(5, 2);
+        for (int i = 1; i <= 10; i++) {
+            Request request = new Request(i, new Date());
+            if (leakyBucketLimiter.tryAcquire(request)) {
+                System.out.println(i + "号请求被接受");
+            } else {
+                System.out.println(i + "号请求被拒绝");
+            }
+        }
+        Thread.sleep(10000);
         for (int i = 1; i <= 10; i++) {
             Request request = new Request(i, new Date());
             if (leakyBucketLimiter.tryAcquire(request)) {
