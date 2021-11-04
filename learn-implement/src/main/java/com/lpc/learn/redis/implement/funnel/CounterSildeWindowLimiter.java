@@ -60,6 +60,7 @@ public class CounterSildeWindowLimiter {
         long slideNum = Math.min(windowsNum, splitNum);
         for (int i = 0; i < slideNum; i++) {
             // lpctodo 这里要把最老的重制，这里是一个回环数组，后面一个就是最老的，前面一个是最近的一个。可以考虑用链表更直观
+            // lpctodo 这里 index 移动到最后面，就是当前对应的窗口
             index = (index + 1) % splitNum;
             counters[index] = 0;
         }
@@ -67,7 +68,7 @@ public class CounterSildeWindowLimiter {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        // 10s可以进来30个，一个窗口内分成10个小窗口
+        // 10s可以进来30个，一个窗口内分成10个小窗口，也就是一秒3个，如果要求更加平滑，可以增加 splitNum
         CounterSildeWindowLimiter time = new CounterSildeWindowLimiter(10000,30,10);
         for (int i=0;i<100000;i++){
             boolean res = time.tryAcquire();
