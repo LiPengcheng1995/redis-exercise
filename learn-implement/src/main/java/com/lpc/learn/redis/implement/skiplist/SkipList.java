@@ -99,6 +99,7 @@ public class SkipList {
         }
     }
 
+    // lpctodo 如果删除导致层高降低了怎么办？？其实 highLevel 字段的维护不是必须的，直接删了就行
     public void delete(int key)//删除不需要考虑层数
     {
         SkipNode team = headNode;
