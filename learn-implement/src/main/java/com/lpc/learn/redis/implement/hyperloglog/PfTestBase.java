@@ -8,7 +8,6 @@ import java.util.concurrent.ThreadLocalRandom;
 /**
  * Package: com.lpc.learn.redis.implement.hyperloglog
  * User: 李鹏程
- * Email: lipengcheng3@jd.com
  * Date: 2021/12/14
  * Time: 17:39
  * Description:

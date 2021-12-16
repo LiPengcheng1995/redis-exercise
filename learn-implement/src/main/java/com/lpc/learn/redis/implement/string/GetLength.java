@@ -3,7 +3,6 @@ package com.lpc.learn.redis.implement.string;
 /**
  * Package: com.lpc.learn.redis.implement.string
  * User: 李鹏程
- * Email: lipengcheng3@jd.com
  * Date: 2021/11/26
  * Time: 10:29
  * Description:
