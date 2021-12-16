@@ -19,7 +19,7 @@ public class PfTestBase {
         private int maxbits;
 
         public void random() {
-            long value = ThreadLocalRandom.current().nextLong(2L << 32);
+            long value = ThreadLocalRandom.current().nextLong(1L << 32);
             int bits = lowZeros(value);
             if (bits > this.maxbits) {
                 this.maxbits = bits;
@@ -57,11 +57,15 @@ public class PfTestBase {
             log.info("实验次数：{} ,log2(n): {} , 低位连续0: {}", this.n,
                     new BigDecimal(Math.log(this.n) / Math.log(2)).setScale(2, BigDecimal.ROUND_UP).doubleValue(),
                     this.keeper.maxbits);
+
+//            log.info("{},{}",
+//                    new BigDecimal(Math.log(this.n) / Math.log(2)).setScale(2, BigDecimal.ROUND_UP).doubleValue(),
+//                    this.keeper.maxbits);
         }
     }
 
     public static void main(String[] args) {
-        for (int i = 1000; i < 100000; i += 100) {
+        for (int i = 1000; i < 10000; i += 1000) {
             Experiment exp = new Experiment(i);
             exp.work();
             exp.debug();
